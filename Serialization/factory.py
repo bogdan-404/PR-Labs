@@ -88,3 +88,4 @@ class PlayerFactory:
             player.xp = object.xp
             player.cls = Class.Value(object.cls)
         return players_list.SerializeToString()
+

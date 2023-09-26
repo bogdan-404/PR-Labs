@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+# from homework import extract_info
+
 
 def recursive(maxIterations, currentIteration, URL_array, data):
     URL = URL_array[currentIteration]
@@ -27,4 +29,4 @@ def recursive(maxIterations, currentIteration, URL_array, data):
 
 
 URL_array = ["https://999.md/ro/list/construction-and-repair/stoves"]
-recursive(100000000, 0, URL_array, [])
+links = recursive(100000000, 0, URL_array, [])
