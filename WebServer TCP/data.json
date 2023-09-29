@@ -1,17 +1,17 @@
 [
     {
-      "name" : "Fluent Python: Clear, Concise, and Effective Programming",
-      "author" : "Luciano Ramalho",
-      "price" : 39.95,
-      "id" : 1,
-      "description" : "Don't waste time bending Python to fit patterns you've learned in other languages. Python's simplicity lets you become productive quickly, but often this means you aren't using everything the language has to offer. With the updated edition of this hands-on guide, you'll learn how to write effective, modern Python 3 code by leveraging its best ideas. "
+        "name" : "Fluent Python: Clear, Concise, and Effective Programming",
+        "author" : "Luciano Ramalho",
+        "price" : 39.95,
+        "id" : 1,
+        "description" : "Don't waste time bending Python to fit patterns you've learned in other languages. Python's simplicity lets you become productive quickly, but often this means you aren't using everything the language has to offer. With the updated edition of this hands-on guide, you'll learn how to write effective, modern Python 3 code by leveraging its best ideas. "
     },
     {
-      "name" : "Introducing Python: Modern Computing in Simple Packages",
-      "author" : "Bill Lubanovic",
-      "price" : 27.49,
-      "id" : 2,
-      "description" : "Easy to understand and fun to read, this updated edition of Introducing Python is ideal for beginning programmers as well as those new to the language."
+        "name" : "Introducing Python: Modern Computing in Simple Packages",
+        "author" : "Bill Lubanovic",
+        "price" : 27.49,
+        "id" : 2,
+        "description" : "Easy to understand and fun to read, this updated edition of Introducing Python is ideal for beginning programmers as well as those new to the language."
     },
     {
         "name" : "Clean Code: A Handbook of Agile Software Craftsmanship",
@@ -24,7 +24,7 @@
         "name" : "Introduction to Algorithms",
         "author" : "Thomas H. Cormen, Charles E",
         "price" : 56.90,
-        "id" : 3,
+        "id" : 4,
         "description" : "The name of the book is self-explanatory. It is what the title suggests, i.e., Introduction to Algorithms. Also known as CLRS, a reference to the last name of the authors of the book, it goes in-depth into a range of algorithms divided across several self-contained chapters."
       }
   ]
