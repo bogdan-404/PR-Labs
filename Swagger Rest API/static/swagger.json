@@ -1,0 +1,158 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1",
+    "title": "Swagger Demo App"
+  },
+  "host": "127.0.0.1:5000",
+  "basePath": "/",
+  "appDescription": "Demo Swagger App Project for a database of scooters",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/electro-scooters/": {
+      "post": {
+        "summary": "Add Scooter",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/desc/ScooterWithoutID"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Succesful",
+            "schema": {
+              "$ref": "#/desc/Scooter"
+            }
+          }
+        }
+      }
+    },
+    "/api/electro-scooters/{id}": {
+      "get": {
+        "summary": "Get Info about Scooter",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/desc/Scooter"
+            }
+          },
+          "404": {
+            "description": "Scooter not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Modify Scooter Info",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/desc/ScooterWithoutID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Add New Scooter",
+            "schema": {
+              "$ref": "#/desc/Scooter"
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Scooter",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "X-Delete-Password",
+            "in": "header",
+            "description": "Password for deletion",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Succesful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    }
+  },
+  "desc": {
+    "Scooter": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name"
+        },
+        "battery_level": {
+          "type": "number",
+          "description": "Battery Level"
+        }
+      }
+    },
+    "ScooterWithoutID": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name"
+        },
+        "battery_level": {
+          "type": "number",
+          "description": "Battery Level"
+        }
+      }
+    }
+  }
+}

@@ -31,15 +31,7 @@ def handle_client(client_socket, client_address):
                 if client != client_socket:
                     client.send(message.encode("utf-8"))
         elif message_data["type"] == "file":
-            file_path = os.path.join(SERVER_MEDIA, message_data["filename"])
-            with open(file_path, "wb") as f:
-                f.write(message_data["content"].encode())
-            response = {
-                "type": "text",
-                "message": f"User {message_data['username']} uploaded the file {message_data['filename']}",
-                "username": "server",
-                "room": message_data["room"],
-            }
+                
             for client in clients:
                 client.send(json.dumps(response).encode("utf-8"))
         elif message_data["type"] == "download":
