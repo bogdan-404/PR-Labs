@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email and FTP Service</title>
+</head>
+<body>
+    <h1>Email and FTP Service</h1>
+    <form action="/send_email" method="post" enctype="multipart/form-data">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <label for="file">Attach a file (optional):</label><br>
+        <input type="file" id="file" name="file"><br><br>
+        <input type="submit" value="Send Email">
+    </form>
+</body>
+</html>

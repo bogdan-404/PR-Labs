@@ -1,7 +1,3 @@
-import os
-import logging
-
-
 class RaftNode:
     def __init__(self, node_id, lock_file_path):
         self.node_id = node_id
@@ -18,4 +14,4 @@ class RaftNode:
             with open(self.lock_file_path, "r") as lock_file:
                 leader_id = lock_file.read()
             self.state = "leader" if leader_id == self.node_id else "follower"
-        logging.info(f"Node {self.node_id} initialized as {self.state}")
+        print(f"Node {self.node_id} initialized as {self.state}")

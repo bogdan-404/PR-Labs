@@ -2,9 +2,7 @@ from flask import Flask, request, jsonify
 from models import db, ElectroScooter
 from RaftNode import RaftNode
 import os
-import logging
 
-logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 node_id = os.getenv("NODE_ID", "node_1")
